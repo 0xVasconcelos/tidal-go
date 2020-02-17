@@ -7,7 +7,7 @@ import (
 	"encoding/hex"
 )
 
-var master_key, _ = hex.DecodeString("5089534C432698B7C6A30A3F502EB4C761F8E56E8C74681345FA3FBA6838EF9E")
+var masterKey, _ = hex.DecodeString("5089534C432698B7C6A30A3F502EB4C761F8E56E8C74681345FA3FBA6838EF9E")
 
 func (m *Media) GetKey() error {
 
@@ -17,7 +17,7 @@ func (m *Media) GetKey() error {
 		return err
 	}
 
-	block, err := aes.NewCipher(master_key)
+	block, err := aes.NewCipher(masterKey)
 
 	if err != nil {
 		return err
